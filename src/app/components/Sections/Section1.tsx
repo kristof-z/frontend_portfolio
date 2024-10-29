@@ -46,7 +46,7 @@ export default function Section1() {
           viewport={{ once: true }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
         >
-          This page showcases my work and dedication to development. I am excited to share my skills and hope it gives you insight into how I can contribute to your next project or team. Let’s build something great together!
+            You found me, awesome! Here’s a glimpse of my work and passion for development. Let’s see how we can build something amazing together!
         </motion.h3>
       </div>
       <Buttons />

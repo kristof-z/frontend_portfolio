@@ -7,9 +7,9 @@ import { ArrowRight, Check, CornerUpRight } from 'react-feather';
 import { FormDataProps } from '../types';
 
 function Form() {
-  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm<FormDataProps>();
+  const { register, handleSubmit, formState: { errors } } = useForm<FormDataProps>();
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'loading'>('idle');
-
+  
   const onSubmit: SubmitHandler<FormDataProps> = async (data) => {
     setSubmitStatus('loading');
     try {
@@ -20,37 +20,42 @@ function Form() {
       });
       if (!emailResponse.ok) throw new Error('Failed to send email');
       setSubmitStatus('success');
-      reset();
     } catch (error) {
       console.error('Error:', error);
       setSubmitStatus('error');
     }
   };
 
-  const handleAutofill = () => {
-    const fields = ['name', 'email', 'message'];
-    fields.forEach((field) => {
-      const element = document.getElementById(field) as HTMLInputElement | null;
-      if (element && element.value) {
-        setValue(field as keyof FormDataProps, element.value);
-      }
-    });
-  };
-
   return (
     <div className="self-center w-full">
-      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-10 items-center" onChange={handleAutofill}>
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-10 items-center">
         <InputField
+          disabled={submitStatus === 'loading' || submitStatus === 'success'}
           placeholder="Email"
           id="email"
           type="email"
           register={register}
-          registerOptions={{ required: 'I promise no spam. Just your email, please!' }}
+          registerOptions={{ 
+            required: 'I promise no spam. Just your email, please!',
+            pattern: {
+              value: /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/,
+              message: 'Please enter a valid email address.',
+            },
+            minLength: {
+              value: 5,
+              message: 'Email should be at least 5 characters long.',
+            },
+            maxLength: {
+              value: 50,
+              message: 'Email should not exceed 50 characters.',
+            },
+          }}
           errors={errors as { [key: string]: { message: string } }}
         />
        
        <motion.button
           type="submit"
+          disabled={submitStatus === 'loading' || submitStatus === 'success'}
           className="form-btn"
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 1.1 }}
@@ -58,7 +63,7 @@ function Form() {
         >
          {submitStatus === 'loading' ? (
             <PulseLoader color="black" size={10} />
-          ) : submitStatus === 'success' ? (
+          ) : (submitStatus === 'success') ? (
             <Check size={30} />
           ) : submitStatus === 'error' ? (
             <CornerUpRight size={30} />

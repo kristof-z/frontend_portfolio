@@ -32,7 +32,7 @@ export default function CanvasScene() {
       camera={{ position: [25, 30, 90], fov: 30 }}
       style={{ background: "black" }}
     >
-      <ScrollControls pages={pages}>
+      <ScrollControls pages={pages} damping={0.1}>
         <Boxes />
         <ambientLight intensity={0.1} />
         <Scroll html>

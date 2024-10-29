@@ -18,10 +18,10 @@ const Section3: React.FC = () => {
         transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         <span className="flex flex-col w-full text-center gap-[50px]">
-          <p className="section2-header-text text-white max-w-[40vw] lg:max-w-[50vw] self-center">
+          <p className="section2-header-text text-white self-center">
             <span className='text-yellow-400'>Get</span> in touch
           </p>
-          <p className="text-white text-3xl font-normal">
+          <p className="section1-text text-white font-normal">
             Have a question, project idea, or just want to connect? I’d love to hear from you! Enter your email below, and let’s start a conversation about how we can bring your vision to life.
           </p>
         </span>       

@@ -15,30 +15,27 @@ export const skills: string[] = [
 export const projects: ProjectCardProps[] = [
   {
     title: 'Nelicat',
-    description: 'A fully interactive 3D portfolio site built with React Three Fiber and Next.js. A fully interactive 3D portfolio site built with React Three Fiber and Next.js.',
+    description: 'A lovely landing page for a cat hotel made with Next.js.',
     github: '/images/logo-single-1.png',
-    link: '/projects/3d-portfolio',
+    link: 'https://www.nelicat.com',
     index: 0, 
   },
   {
     title: 'NFT Vault',
     description: 'An online store with full payment integration and product management.',
-    github: '/images/nelicat.png',
-    link: '/projects/ecommerce-platform',
+    github: 'https://github.com/kristof-z',
     index: 1, 
   },
   {
     title: 'Session meter',
     description: 'An online store with full payment integration and product management.',
-    github: '/images/nelicat.png',
-    link: '/projects/ecommerce-platform',
+    github: 'https://github.com/kristof-z',
     index: 2, 
   },
   {
     title: 'DeSaved',
     description: 'An online store with full payment integration and product management.',
-    github: '/images/nelicat.png',
-    link: '/projects/ecommerce-platform',
+    github: 'https://github.com/kristof-z',
     index: 3,
   },
 ];

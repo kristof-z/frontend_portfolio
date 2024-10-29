@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kristof Zorko, Web Developer",
+  title: "Hi there!",
   description: "Welcome to my portfolio website. Here you can find my projects and contact information.",
   viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Kristof Zorko, Web Developer",
+    title: "Hi, there",
     description: "Welcome to my portfolio website. Here you can find my projects and contact information.",
     url: "https://www.kristofzorko.com/",
     type: "website",

@@ -48,10 +48,12 @@ export interface InputFieldProps {
   placeholder?: string;
   registerOptions?: object;
   errors?: { [key: string]: { message: string } };
+  disabled?: boolean;
 }
 
 export interface FormDataProps {
   name: string;
   email: string;
   message: string;
+  submitStatus: 'idle' | 'success' | 'error' | 'loading'
 }

@@ -7,8 +7,8 @@ import IconEmail from "../IconEmail";
 export default function Buttons() {
   return (
     <div className="flex mt-10 z-10">
-      <IconButton label="github" href={"https://github.com"} icon={<IconGithub />} />
-      <IconButton label="email" href={"https://github.com"} icon={<IconEmail />} />
+      <IconButton label="github" href={"https://github.com/kristof-z"} icon={<IconGithub />} />
+      <IconButton label="email" href={"contact@kristofzorko.com"} icon={<IconEmail />} />
     </div>
       
   );
