@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: black;
+  --foreground: black;
+}
+
+html {
+  min-width: 300px;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+@layer utilities {
+ 
+  h1 {
+    @apply font-semibold text-[80px] md:text-[100px] lg:text-[160px] leading-[160px] tracking-[-3px] lg:tracking-[-5px] m-0 mb-2 text-inherit;
+  } 
+
+  h2 {
+    @apply font-semibold text-[24px] lg:text-[30px] leading-[30px] m-0 mb-2 text-inherit;
+  }
+
+  h3 {
+    @apply text-[17px] leading-[1.5] font-light tracking-[0.1px] text-inherit pointer-events-auto;
+  }
+}
+
+@layer components {
+  .main {
+    @apply grid grid-cols-1 relative px-[20px] lg:px-[50px] z-20 w-[100vw] h-full gap-[200px] lg:gap-[300px]
+  }
+  
+  .section1-container {
+    @apply min-h-[100vh] relative w-full flex flex-col justify-center items-center;
+  }
+
+  .section1-content {
+    @apply flex w-full max-w-screen-lg flex-col;
+  }
+
+  .section1-title {
+    @apply flex flex-row text-white self-center;
+  }
+
+  .section1-subtitle {
+    @apply text-yellow-400 flex-row flex gap-2 self-center my-10;
+  }
+
+  .section1-text {
+    @apply flex flex-row text-white text-lg lg:text-3xl text-center;
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+    line-height: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+  }
+
+  .section2-container {
+    @apply w-full flex flex-col justify-center items-center gap-[100px] lg:gap-[200px];
+  }
+
+  .section2-content {
+    @apply flex flex-col gap-[50px] lg:gap-[50px] w-full max-w-screen-xl;
+  }
+
+  .section2-header {
+    @apply grid grid-flow-col auto-cols-max lg:gap-4 w-full;
+  }
+
+  .section2-header-text {
+    @apply text-[80px] leading-[50px] lg:text-[180px] w-full lg:leading-[150px] font-extrabold mb-2 text-yellow-400;
+  }
+
+  @media (max-width: 768px) {
+    .section2-header {
+      @apply flex flex-wrap justify-center;
+    }
+  }
+
+  .section2-project {
+    @apply flex w-full px-4 lg:px-20;
+  }
+
+  .stackbar-container {
+    @apply h-full flex -translate-x-[5vw] justify-center items-center absolute w-[130vw];
+    top: max(40vh, 400px);
+  }
+
+  .stackbar-container2 {
+    @apply flex -translate-x-[15vw] justify-center items-start top-0 absolute w-[130vw];
+    rotate: +8deg;
+  }
+
+  .stackbar-inner {
+    @apply bg-yellow-400 text-black w-full h-[50px] flex justify-center items-center whitespace-nowrap;
+    rotate: -4deg;
+    position: relative;
+  }
+
+  .stackbar-text {
+    @apply text-2xl font-bold ml-[5px]; 
+  }
+
+  .project-card {
+    @apply flex flex-col gap-10 w-full;
+  }
+
+  .project-card-title {
+    @apply text-yellow-400 font-extrabold;
+    font-size: clamp(2.5rem, 5vw + 1rem, 5rem);
+    line-height: clamp(2.5rem, 5vw + 1rem, 5rem);
+  }
+
+  .project-card-description {
+    @apply text-white max-w-full lg:max-w-[60%];
+    font-size: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+    line-height: clamp(1.5rem, 3vw + 1rem, 2.5rem); 
+  }
+
+  .project-card-link {
+    @apply text-yellow-400;
+    font-size: clamp(1.75rem, 4vw + 1rem, 3.125rem);
+    line-height: clamp(1.75rem, 4vw + 1rem, 3.125rem);
+    position: relative;
+    display: inline-block;
+  }
+
+  .project-card-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 5px; 
+    background-color: currentColor; 
+    transition: width 0.3s ease;
+  }
+
+  .project-card-link:hover::after {
+    width: 100%;
+  }
+
+  .section3-container {
+    @apply relative w-full flex flex-col text-white min-h-[100vh] justify-center gap-[100px]
+  }
+
+  .section3-title {
+    @apply flex flex-col self-center relative max-w-[80vw] lg:max-w-[50vw]
+  }
+
+  .form-btn {
+    @apply bg-yellow-400 size-[80px] text-black p-4 rounded-full flex items-center justify-center m-[10px] relative
+  }
+
+  .form-text {
+    @apply text-center text-xl font-semibold text-yellow-400
+  }
+}
