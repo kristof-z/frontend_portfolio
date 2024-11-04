@@ -11,33 +11,31 @@ export const skills: string[] = [
   "Storybook"
 ];
 
+const NELICAT_LINK = 'https://www.nelicat.com';
+const WRNFT_LINK = 'https://frontend-wrnft.vercel.app/';
+const TAB_SESSION_LINK_GITHUB = 'https://github.com/kristof-z/tab-session'
+export const GITHUB_LINK = 'https://github.com/kristof-z'
+export const EMAIL = 'contact@kristofzorko.com'
 
 export const projects: ProjectCardProps[] = [
   {
     title: 'Nelicat',
     description: 'A lovely landing page for a cat hotel made with Next.js.',
-    github: '/images/logo-single-1.png',
-    link: 'https://www.nelicat.com',
+    link: NELICAT_LINK,
     index: 0, 
   },
   {
-    title: 'NFT Vault',
-    description: 'An online store with full payment integration and product management.',
-    github: 'https://github.com/kristof-z',
+    title: 'wrNFT',
+    description: 'wrNFT is a demo application that showcases the concept of NFT wrapping. This project illustrates how users can wrap their existing NFTs into a new format, adding an additional layer of functionality, flexibility, or metadata to their assets.',
+    link: WRNFT_LINK,
     index: 1, 
   },
   {
-    title: 'Session meter',
-    description: 'An online store with full payment integration and product management.',
-    github: 'https://github.com/kristof-z',
+    title: 'Tab Session',
+    description: 'Simple chrome extension that tracks browser session time and individual tab session time, helping users manage their browsing habits and productivity.',
+    github: TAB_SESSION_LINK_GITHUB,
     index: 2, 
-  },
-  {
-    title: 'DeSaved',
-    description: 'An online store with full payment integration and product management.',
-    github: 'https://github.com/kristof-z',
-    index: 3,
-  },
+  }
 ];
 
 
@@ -48,3 +46,4 @@ export const likes: string[] = [
   "to build",
   "modularity",
 ];
+

@@ -24,7 +24,7 @@ export interface CubeProps {
 export interface ProjectCardProps {
   title: string;
   description: string;
-  github: string;
+  github?: string;
   link?: string;
   index: number;
 }
