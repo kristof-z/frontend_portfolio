@@ -33,7 +33,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, github, l
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <Link href={link} className="project-card-link">
+            <Link target='_blank' href={link} className="project-card-link">
               Visit
             </Link>
           </motion.div>
@@ -45,7 +45,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, github, l
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: 'easeOut' }}
           >
-            <Link href={github} className="project-card-link text-white">
+            <Link target='_blank' href={github} className="project-card-link text-white">
               Github
             </Link>
           </motion.div>
