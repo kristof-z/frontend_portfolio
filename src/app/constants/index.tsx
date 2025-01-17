@@ -12,16 +12,18 @@ export const skills: string[] = [
 const NELICAT_LINK = 'https://www.nelicat.com';
 const WRNFT_LINK = 'https://frontend-wrnft.vercel.app/';
 const TAB_SESSION_LINK_GITHUB = 'https://github.com/kristof-z/tab-session';
-const TAILWIND_REDUX_MODAL_LINK_GITHUB = 'https://github.com/kristof-z/react-modal-tailwind';
+const TAILWIND_REACT_MODAL_LINK_GITHUB = 'https://github.com/kristof-z/react-modal-tailwind';
+const TAILWIND_REACT_MODAL_LINK = 'https://www.npmjs.com/package/react-modal-tailwind';
 
 export const GITHUB_LINK = 'https://github.com/kristof-z'
 export const EMAIL = 'contact@kristofzorko.com'
 
 export const projects: ProjectCardProps[] = [
   {
-    title: 'Tailwind Redux Modal',
-    description: 'A flexible and customizable modal component library.',
-    github: TAILWIND_REDUX_MODAL_LINK_GITHUB,
+    title: 'Tailwind React Modal',
+    description: 'A flexible and customizable modal component library utilizing Redux.',
+    github: TAILWIND_REACT_MODAL_LINK_GITHUB,
+    link: TAILWIND_REACT_MODAL_LINK,
     index: 0, 
   },
   {
