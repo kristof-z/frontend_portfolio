@@ -32,7 +32,7 @@ body {
     //APPLY
     @apply font-semibold text-[80px] md:text-[100px] lg:text-[160px] leading-[160px] tracking-[-3px] lg:tracking-[-5px] m-0 mb-2 text-inherit;
   } 
-    // APPLY
+    // APPLY2
   h2 {
     @apply font-semibold text-[24px] lg:text-[30px] leading-[30px] m-0 mb-2 text-inherit;
   }
